@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- <!DOCTYPE cardapio SYSTEM "definicoes.dtd"> -->
+ <!-- pelo menos 5 pratos -->
+<cardapio>
+    <prato id="p1">
+        <nome></nome>
+        <descricao></descricao>
+        <ingredientes>
+            <ingrediente></ingrediente>
+            <ingrediente></ingrediente>
+        </ingredientes>
+        <preco moeda=""></preco>
+        <calorias></calorias>
+        <tempoPreparo></tempoPreparo>
+    </prato>
+
+    <prato id="p1">
+        <nome></nome>
+        <descricao></descricao>
+        <ingredientes>
+            <ingrediente></ingrediente>
+            <ingrediente></ingrediente>
+        </ingredientes>
+        <preco moeda=""></preco>
+        <calorias></calorias>
+        <tempoPreparo></tempoPreparo>
+    </prato>
+
+    <prato id="p1">
+        <nome></nome>
+        <descricao></descricao>
+        <ingredientes>
+            <ingrediente></ingrediente>
+            <ingrediente></ingrediente>
+        </ingredientes>
+        <preco moeda=""></preco>
+        <calorias></calorias>
+        <tempoPreparo></tempoPreparo>
+    </prato>
+
+    <prato id="p1">
+        <nome></nome>
+        <descricao></descricao>
+        <ingredientes>
+            <ingrediente></ingrediente>
+            <ingrediente></ingrediente>
+        </ingredientes>
+        <preco moeda=""></preco>
+        <calorias></calorias>
+        <tempoPreparo></tempoPreparo>
+    </prato>
+
+    <prato id="p1">
+        <nome></nome>
+        <descricao></descricao>
+        <ingredientes>
+            <ingrediente></ingrediente>
+            <ingrediente></ingrediente>
+        </ingredientes>
+        <preco moeda=""></preco>
+        <calorias></calorias>
+        <tempoPreparo></tempoPreparo>
+    </prato>
+</cardapio>
