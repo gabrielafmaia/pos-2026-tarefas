@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE quiz SYSTEM "quiz.dtd">
+<quiz versao="1.0">
+    <disciplina>Matemática</disciplina>
+    <professor>
+        <nome>Gustavo Maia</nome>
+        <matrícula>12345</matrícula>
+    </professor>
+    <turma>InfoWeb2V</turma>
+    <data>2026-02-08</data>
+    <questões>
+        <questão>
+            <enunciado>Quanto é 2 + 2?</enunciado>
+            <pontuação>1</pontuação>
+            <alternativas>
+                <alternativa correta="nao">3</alternativa>
+                <alternativa correta="nao">5</alternativa>
+                <alternativa correta="nao">6</alternativa>
+                <alternativa correta="sim">4</alternativa>
+            </alternativas>
+        </questão>
+        <questão>
+            <enunciado>Quanto é 1 + 2?</enunciado>
+            <pontuação>1</pontuação>
+            <alternativas>
+                <alternativa correta="sim">3</alternativa>
+                <alternativa correta="nao">5</alternativa>
+                <alternativa correta="nao">6</alternativa>
+                <alternativa correta="nao">4</alternativa>
+            </alternativas>
+        </questão>
+        <questão>
+            <enunciado>Quanto é 5 - 3?</enunciado>
+            <pontuação>1</pontuação>
+            <alternativas>
+                <alternativa correta="nao">1</alternativa>
+                <alternativa correta="sim">2</alternativa>
+                <alternativa correta="nao">3</alternativa>
+                <alternativa correta="nao">4</alternativa>
+            </alternativas>
+        </questão>
+        <questão>
+            <enunciado>Quanto é 3 x 3?</enunciado>
+            <pontuação>1</pontuação>
+            <alternativas>
+                <alternativa correta="nao">6</alternativa>
+                <alternativa correta="nao">8</alternativa>
+                <alternativa correta="sim">9</alternativa>
+                <alternativa correta="nao">12</alternativa>
+            </alternativas>
+        </questão>
+        <questão>
+            <enunciado>Quanto é 10 / 2?</enunciado>
+            <pontuação>1</pontuação>
+            <alternativas>
+                <alternativa correta="nao">2</alternativa>
+                <alternativa correta="nao">4</alternativa>
+                <alternativa correta="sim">5</alternativa>
+                <alternativa correta="nao">6</alternativa>
+            </alternativas>
+        </questão>
+    </questões>
+</quiz>

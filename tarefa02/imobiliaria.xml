@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE imobiliaria [
+<!ELEMENT imobiliaria (imovel+)>
+<!ELEMENT imovel (descricao, proprietario, endereco, caracteristicas, valor)>
+<!ELEMENT proprietario (nome, (email|telefone)+)>
+<!ELEMENT endereco (rua, bairro, cidade, número?)>
+<!ELEMENT nome (#PCDATA)>
+<!ELEMENT email (#PCDATA)>
+<!ELEMENT rua (#PCDATA)>
+<!ELEMENT descricao (#PCDATA)>
+<!ELEMENT bairro (#PCDATA)>
+<!ELEMENT cidade (#PCDATA)>
+<!ELEMENT telefone (#PCDATA)>
+<!ELEMENT número (#PCDATA)>
+<!ELEMENT tamanho (#PCDATA)>
+<!ELEMENT numQuartos (#PCDATA)>
+<!ELEMENT numBanheiros (#PCDATA)>
+<!ELEMENT valor (#PCDATA)>
+<!ELEMENT caracteristicas (tamanho, numQuartos, numBanheiros)>
+]>
+
+<imobiliaria>
+    <imovel>
+        <descricao>Casa simples e aconchegante</descricao>
+        <proprietario>
+            <nome>João Silva</nome>
+            <email>joao@email.com</email>
+            <telefone>84999990001</telefone>
+            <telefone>84999990002</telefone>
+        </proprietario>
+        <endereco>
+            <rua>Rua das Flores</rua>
+            <bairro>Centro</bairro>
+            <cidade>Natal</cidade>
+            <número>123</número>
+        </endereco>
+        <caracteristicas>
+            <tamanho>80m2</tamanho>
+            <numQuartos>2</numQuartos>
+            <numBanheiros>1</numBanheiros>
+        </caracteristicas>
+        <valor>150000</valor>
+    </imovel>
+
+    <imovel>
+        <descricao>Apartamento pequeno</descricao>
+        <proprietario>
+            <nome>Maria Freitas</nome>
+            <email>maria@email.com</email>
+            <telefone>84999990003</telefone>
+        </proprietario>
+        <endereco>
+            <rua>Av. Principal</rua>
+            <bairro>Zona Sul</bairro>
+            <cidade>Natal</cidade>
+            <número>456</número>
+        </endereco>
+        <caracteristicas>
+            <tamanho>60m2</tamanho>
+            <numQuartos>2</numQuartos>
+            <numBanheiros>1</numBanheiros>
+        </caracteristicas>
+        <valor>200000</valor>
+    </imovel>
+
+    <imovel>
+        <descricao>Casa grande com quintal</descricao>
+        <proprietario>
+            <nome>Lucas Lima</nome>
+            <email>lucas@email.com</email>
+            <telefone>84999990004</telefone>
+        </proprietario>
+        <endereco>
+            <rua>Rua Verde</rua>
+            <bairro>Lagoa Nova</bairro>
+            <cidade>Natal</cidade>
+            <número>789</número>
+        </endereco>
+        <caracteristicas>
+            <tamanho>120m2</tamanho>
+            <numQuartos>3</numQuartos>
+            <numBanheiros>2</numBanheiros>
+        </caracteristicas>
+        <valor>300000</valor>
+    </imovel>
+
+    <imovel>
+        <descricao>Apartamento moderno</descricao>
+        <proprietario>
+            <nome>Ana Costa</nome>
+            <email>ana@email.com</email>
+            <telefone>84999990005</telefone>
+        </proprietario>
+        <endereco>
+            <rua>Rua Azul</rua>
+            <bairro>Ponta Negra</bairro>
+            <cidade>Natal</cidade>
+            <número>101</número>
+        </endereco>
+        <caracteristicas>
+            <tamanho>70m2</tamanho>
+            <numQuartos>2</numQuartos>
+            <numBanheiros>2</numBanheiros>
+        </caracteristicas>
+        <valor>250000</valor>
+    </imovel>
+
+    <imovel>
+        <descricao>Casa compacta</descricao>
+        <proprietario>
+            <nome>Pedro Alves</nome>
+            <email>pedro@email.com</email>
+            <telefone>84999990006</telefone>
+        </proprietario>
+        <endereco>
+            <rua>Rua do Sol</rua>
+            <bairro>Igapó</bairro>
+            <cidade>Natal</cidade>
+            <!--sem número-->
+        </endereco>
+        <caracteristicas>
+            <tamanho>50m2</tamanho>
+            <numQuartos>1</numQuartos>
+            <numBanheiros>1</numBanheiros>
+        </caracteristicas>
+        <valor>120000</valor>
+    </imovel>
+</imobiliaria>
