@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<cardapio xmlns:xs="http://www.w3.org/2001/XMLSchema"
+        xmlns="http://cardapio.org"
+        targetNamespace="http://cardapio.org"
+        elementFormDefault="qualified">
+    <prato id="p1">
+        <nome>Escondidinho</nome>
+        <descricao>Purê de macaxeira com carne seca</descricao>
+        <ingredientes>
+            <ingrediente>Macaxeira</ingrediente>
+            <ingrediente>Carne seca</ingrediente>
+            <ingrediente>Queijo</ingrediente>
+        </ingredientes>
+        <preco moeda="BRL">&reais; 20.00</preco>
+        <calorias>650</calorias>
+        <tempoPreparo>50 min</tempoPreparo>
+    </prato>
+
+    <prato id="p2">
+        <nome>Galinha caipira</nome>
+        <descricao>Frango cozido com temperos caseiros</descricao>
+        <ingredientes>
+            <ingrediente>Frango</ingrediente>
+            <ingrediente>Cebola</ingrediente>
+            <ingrediente>Alho</ingrediente>
+        </ingredientes>
+        <preco moeda="USD">15.00</preco>
+        <calorias>500</calorias>
+        <tempoPreparo>60 min</tempoPreparo>
+    </prato>
+
+    <prato id="p3">
+        <nome>Tapioca</nome>
+        <descricao>Massa de mandioca recheada</descricao>
+        <ingredientes>
+            <ingrediente>Goma de mandioca</ingrediente>
+            <ingrediente>Queijo</ingrediente>
+        </ingredientes>
+        <preco moeda="BRL">&reais; 5.00</preco>
+        <calorias>300</calorias>
+        <tempoPreparo>10 min</tempoPreparo>
+    </prato>
+
+    <prato id="p4">
+        <nome>Arroz de leite</nome>
+        <descricao>Arroz cremoso com leite</descricao>
+        <ingredientes>
+            <ingrediente>Arroz</ingrediente>
+            <ingrediente>Leite</ingrediente>
+            <ingrediente>Sal</ingrediente>
+        </ingredientes>
+        <preco moeda="BRL">&reais; 10.00</preco>
+        <calorias>400</calorias>
+        <tempoPreparo>30 min</tempoPreparo>
+    </prato>
+
+    <prato id="p5">
+        <nome>Bolacha assada</nome>
+        <descricao>Bolacha assada ao leite</descricao>
+        <ingredientes>
+            <ingrediente>Bolacha</ingrediente>
+            <ingrediente>Leite</ingrediente>
+            <ingrediente>Manteiga</ingrediente>
+        </ingredientes>
+        <preco moeda="USD">10.00</preco>
+        <calorias>350</calorias>
+        <tempoPreparo>10 min</tempoPreparo>
+    </prato>
+</cardapio>

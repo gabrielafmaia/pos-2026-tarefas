@@ -1,0 +1,19 @@
+<schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+        xmlns="http://cardapio.org"
+        targetNamespace="http://cardapio.org"
+        elementFormDefault="qualified">
+<element name="cardapio" type="integer"/>
+<element name="xs:nome"/>
+<element name="descricao"/>
+<element name="ingredientes" type="ingredientes_type"/>
+
+<simpleType name="ingredientes_type">
+    <restriction base="integer">
+        <minInclusive value="0"/>
+        <maxInclusive value="120"/>
+    </restriction>
+</simpleType>
+
+<element name="preco"/>
+<element name="calorias"/>
+<element name="tempoPreparo"/>
