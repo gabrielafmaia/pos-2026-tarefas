@@ -1,0 +1,64 @@
+{
+    "quiz": {
+        "versao": "1.0",
+        "disciplina": "Matemática",
+        "professor": {
+        "nome": "Gustavo Maia",
+        "matricula": "12345"
+        },
+        "turma": "InfoWeb2V",
+        "data": "2026-02-08",
+        "questoes": [
+            {
+                "enunciado": "Quanto é 2 + 2?",
+                "pontuacao": 1,
+                "alternativas": [
+                { "texto": "3", "correta": false },
+                { "texto": "5", "correta": false },
+                { "texto": "6", "correta": false },
+                { "texto": "4", "correta": true }
+                ]
+            },
+            {
+                "enunciado": "Quanto é 1 + 2?",
+                "pontuacao": 1,
+                "alternativas": [
+                { "texto": "3", "correta": true },
+                { "texto": "5", "correta": false },
+                { "texto": "6", "correta": false },
+                { "texto": "4", "correta": false }
+                ]
+            },
+            {
+                "enunciado": "Quanto é 5 - 3?",
+                "pontuacao": 1,
+                "alternativas": [
+                { "texto": "1", "correta": false },
+                { "texto": "2", "correta": true },
+                { "texto": "3", "correta": false },
+                { "texto": "4", "correta": false }
+                ]
+            },
+            {
+                "enunciado": "Quanto é 3 x 3?",
+                "pontuacao": 1,
+                "alternativas": [
+                { "texto": "6", "correta": false },
+                { "texto": "8", "correta": false },
+                { "texto": "9", "correta": true },
+                { "texto": "12", "correta": false }
+                ]
+            },
+            {
+                "enunciado": "Quanto é 10 / 2?",
+                "pontuacao": 1,
+                "alternativas": [
+                { "texto": "2", "correta": false },
+                { "texto": "4", "correta": false },
+                { "texto": "5", "correta": true },
+                { "texto": "6", "correta": false }
+                ]
+            }
+        ]
+    }
+}

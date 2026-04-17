@@ -1,0 +1,80 @@
+{
+    "cardapio": {
+        "prato": [
+            {
+                "id": "p1",
+                "nome": "Escondidinho",
+                "descricao": "Purê de macaxeira com carne seca",
+                "ingredientes": {
+                    "ingrediente": [
+                        "Macaxeira",
+                        "Carne seca",
+                        "Queijo"
+                    ]
+                },
+                "preco": "R$ 20.00",
+                "calorias": "650",
+                "tempoPreparo": "50 min"
+            },
+            {
+                "id": "p2",
+                "nome": "Galinha caipira",
+                "descricao": "Frango cozido com temperos caseiros",
+                "ingredientes": {
+                    "ingrediente": [
+                        "Frango",
+                        "Cebola",
+                        "Alho"
+                    ]
+                },
+                "preco": "R$ 15.00",
+                "calorias": "500",
+                "tempoPreparo": "60 min"
+            },
+            {
+                "id": "p3",
+                "nome": "Tapioca",
+                "descricao": "Massa de mandioca recheada",
+                "ingredientes": {
+                    "ingrediente": [
+                        "Goma de mandioca",
+                        "Queijo"
+                    ]
+                },
+                "preco": "R$ 5.00",
+                "calorias": "300",
+                "tempoPreparo": "10 min"
+            },
+            {
+                "id": "p4",
+                "nome": "Arroz de leite",
+                "descricao": "Arroz cremoso com leite",
+                "ingredientes": {
+                    "ingrediente": [
+                        "Arroz",
+                        "Leite",
+                        "Sal"
+                    ]
+                },
+                "preco": "R$ 10.00",
+                "calorias": "400",
+                "tempoPreparo": "30 min"
+            },
+            {
+                "id": "p5",
+                "nome": "Bolacha assada",
+                "descricao": "Bolacha assada ao leite",
+                "ingredientes": {
+                    "ingrediente": [
+                        "Bolacha",
+                        "Leite",
+                        "Manteiga"
+                    ]
+                },
+                "preco": "R$ 10.00",
+                "calorias": "350",
+                "tempoPreparo": "10 min"
+            }
+        ]
+    }
+}
