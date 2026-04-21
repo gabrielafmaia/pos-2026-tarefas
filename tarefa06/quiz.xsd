@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+        xmlns:b="http://quiz.org"
+        targetNamespace="http://quiz.org"
+        elementFormDefault="qualified">
+    <element name="quiz" type="b:quiz"></element>
+    <complexType name="quiz">
+        <sequence>
+            <element ref="b:disciplina"/>
+            <element ref="b:professor"></element>
+            <element ref="b:turma"></element>
+            <element ref="b:data"></element>
+            <element ref="b:questões"></element>
+        </sequence>
+        <attribute name="versao" type="string" use="required"></attribute>
+    </complexType>
+    <element name="disciplina" type="string"></element>
+    <element name="professor">
+        <complexType>
+            <sequence>
+                <element name="nome" type="string"></element>
+                <element name="matrícula" type="string" minOccurs="0" maxOccurs="1"></element>
+            </sequence>
+        </complexType>
+    </element>    
+    <element name="turma" type="string"></element>
+    <element name="data" type="string"></element>
+    <element name="questões">
+        <complexType>
+            <sequence>
+                <element ref="b:questão" minOccurs="1" maxOccurs="unbounded"></element>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="questão">
+        <complexType>
+            <sequence>
+                <element name="enunciado" type="string"></element>
+                <element name="pontuação" type="string"></element>
+                <element ref="b:alternativas"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="alternativas">
+        <complexType>
+            <sequence>
+                <element ref="b:alternativa" minOccurs="1" maxOccurs="unbounded"></element>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="alternativa" type="b:alternativa"></element>
+    <complexType name="alternativa">
+        <simpleContent>
+            <extension base="string">
+                <attribute name="correta" use="required">
+                    <simpleType>
+                        <restriction base="string">
+                            <enumeration value="sim"/>
+                            <enumeration value="nao"/>
+                        </restriction>
+                    </simpleType>
+                </attribute>
+            </extension>
+        </simpleContent>
+    </complexType>
+</schema>
