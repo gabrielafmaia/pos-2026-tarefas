@@ -12,7 +12,7 @@
                     "rua": "Rua das Flores",
                     "bairro": "Centro",
                     "cidade": "Natal",
-                    "numero": "123"
+                    "número": "123"
                 },
                 "caracteristicas": {
                     "tamanho": "80m2",
@@ -32,7 +32,7 @@
                     "rua": "Av. Principal",
                     "bairro": "Zona Sul",
                     "cidade": "Natal",
-                    "numero": "456"
+                    "número": "456"
                 },
                 "caracteristicas": {
                     "tamanho": "60m2",
@@ -52,7 +52,7 @@
                     "rua": "Rua Verde",
                     "bairro": "Lagoa Nova",
                     "cidade": "Natal",
-                    "numero": "789"
+                    "número": "789"
                 },
                 "caracteristicas": {
                     "tamanho": "120m2",
@@ -72,7 +72,7 @@
                     "rua": "Rua Azul",
                     "bairro": "Ponta Negra",
                     "cidade": "Natal",
-                    "numero": "101"
+                    "número": "101"
                 },
                 "caracteristicas": {
                     "tamanho": "70m2",
