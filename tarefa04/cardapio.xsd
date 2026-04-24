@@ -28,10 +28,15 @@
             </sequence>
         </complexType>
     </element>
+    <simpleType name="precoType">
+        <restriction base="decimal">
+            <fractionDigits value="2"/>
+        </restriction>
+    </simpleType>
     <element name="prato" type="b:prato"/>
     <element name="nome" type="string"/>
     <element name="descricao" type="string"/>
-    <element name="preco" type="decimal"/>
+    <element name="preco" type="b:precoType"/>
     <element name="tempoPreparo" type="string"/>
     <element name="calorias" type="integer"/>
     <element name="ingrediente" type="string"/>
