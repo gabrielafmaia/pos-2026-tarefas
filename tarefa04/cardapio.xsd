@@ -3,6 +3,13 @@
         xmlns:b="http://cardapio.org"
         targetNamespace="http://cardapio.org"
         elementFormDefault="qualified">
+    <element name="prato" type="b:prato"/>
+    <element name="nome" type="string"/>
+    <element name="descricao" type="string"/>
+    <element name="preco" type="b:precoType"/>
+    <element name="tempoPreparo" type="string"/>
+    <element name="calorias" type="integer"/>
+    <element name="ingrediente" type="string"/>
     <element name="cardapio">
         <complexType>
             <sequence>
@@ -33,11 +40,4 @@
             <fractionDigits value="2"/>
         </restriction>
     </simpleType>
-    <element name="prato" type="b:prato"/>
-    <element name="nome" type="string"/>
-    <element name="descricao" type="string"/>
-    <element name="preco" type="b:precoType"/>
-    <element name="tempoPreparo" type="string"/>
-    <element name="calorias" type="integer"/>
-    <element name="ingrediente" type="string"/>
 </schema>

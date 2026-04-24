@@ -1,6 +1,6 @@
 {
     "cardapio": {
-        "prato": [
+        "pratos": [
             {
                 "id": "p1",
                 "nome": "Escondidinho",
