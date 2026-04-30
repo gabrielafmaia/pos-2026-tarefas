@@ -16,8 +16,7 @@ for prato in pratos:
 opcao = input("Digite o id do prato para saber mais: ")
 
 for prato in pratos:
-    id = prato.getAttribute("id")
-    if opcao == id:
+    if opcao == prato.getAttribute("id"):
         nome = prato.getElementsByTagName("nome")[0].firstChild.nodeValue
         descricao = prato.getElementsByTagName("descricao")[0].firstChild.nodeValue
         preco = prato.getElementsByTagName("preco")[0].firstChild.nodeValue

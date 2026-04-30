@@ -1,41 +1,30 @@
 import json
 
-with open("tarefa10/imobiliaria.json", "r") as arquivo:
+with open("tarefa10/imobiliaria.json", "r", encoding="utf-8") as arquivo:
     dados = json.load(arquivo)
 
-nomes = {
-    "nome": "Nome",
-    "email": "Email",
-    "telefone": "Telefone",
-    "rua": "Rua",
-    "bairro": "Bairro",
-    "cidade": "Cidade",
-    "número": "Número",
-    "tamanho": "Tamanho",
-    "numQuartos": "Número de quartos",
-    "numBanheiros": "Número de banheiros"
-}
+imoveis = dados["imobiliaria"]["imoveis"]
 
-print("---IMÓVEIS DISPONÍVEIS---")
-for i in range(len(dados)):
-    print(i + 1, "-", dados[i]["descricao"])
+print("---IMÓVEIS---")
+for i in range(len(imoveis)):
+    print(i + 1, "-", imoveis[i]["descricao"])
 
 opcao = int(input("Digite o id do imóvel para saber mais: "))
-imovel = dados[opcao - 1]
 
-print("\n---DETALHES DO IMÓVEL---")
-print("Descrição:", imovel["descricao"])
-print("-----------------------")
+imovel = imoveis[opcao - 1]
+
+print("\nDescrição:", imovel["descricao"])
 print("Proprietário:")
-for chave in imovel["proprietario"]:
-    print(nomes[chave] + ":", imovel["proprietario"][chave])
-print("-----------------------")
+print("Nome:", imovel["proprietario"].get("nome"))
+print("Telefone:", imovel["proprietario"].get("telefone"))
+print("Email:", imovel["proprietario"].get("email"))
 print("Endereço:")
-for chave in imovel["endereco"]:
-    print(nomes[chave] + ":", imovel["endereco"][chave])
-print("-----------------------")
+print("Rua:", imovel["endereco"].get("rua"))
+print("Número:", imovel["endereco"].get("numero"))
+print("Bairro:", imovel["endereco"].get("bairro"))
+print("Cidade:", imovel["endereco"].get("cidade"))
 print("Características:")
-for chave in imovel["caracteristicas"]:
-    print(nomes[chave] + ":", imovel["caracteristicas"][chave])
-print("-----------------------")
+print("Tamanho:", imovel["caracteristicas"].get("tamanho"))
+print("Quartos:", imovel["caracteristicas"].get("numQuartos"))
+print("Banheiros:", imovel["caracteristicas"].get("numBanheiros"))
 print("Valor:", imovel["valor"])
