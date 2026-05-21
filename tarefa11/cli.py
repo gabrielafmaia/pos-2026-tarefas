@@ -68,5 +68,5 @@ while opcao:
                 print("Erro ao criar usuário.")
 
     if opcao == "6":
-        print("Saindo...")
+        print("Tchauzinho...")
         opcao = False
