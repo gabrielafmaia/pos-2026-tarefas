@@ -1,6 +1,6 @@
 import requests
 
-API_URL = "https://jsonplaceholder.typicode.com/users"
+API_URL = "https://jsonplaceholder.typicode.com"
 
 def list():
     request = requests.get(f"{API_URL}/users/")
