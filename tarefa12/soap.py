@@ -3,6 +3,7 @@ from xml.dom.minidom import parseString
 
 # URL do serviço SOAP
 url = "http://webservices.oorsprong.org/websamples.countryinfo/CountryInfoService.wso"
+
 op = input("Digite 1 para código telefônico, 2 para capital e 3 para nome do país: ")
 if op == "1":
     operation = "CountryIntPhoneCode"
@@ -35,7 +36,7 @@ if response.status_code == 200:
     if op == "1":
         print("O código telefônico do país é " + parseString(response.text).documentElement.getElementsByTagName("m:CountryIntPhoneCodeResult")[0].firstChild.nodeValue)
     elif op == "2":
-        print("A capital do país é " + parseString(response.text).documentElement.getElementsByTagName("m:CapitalCity")[0].firstChild.nodeValue)
+        print("A capital do país é " + parseString(response.text).documentElement.getElementsByTagName("m:CapitalCityResult")[0].firstChild.nodeValue)
     elif op == "3":
-        print("O nome do país é " + parseString(response.text).documentElement.getElementsByTagName("m:CountryName")[0].firstChild.nodeValue)
+        print("O nome do país é " + parseString(response.text).documentElement.getElementsByTagName("m:CountryNameResult")[0].firstChild.nodeValue)
 
