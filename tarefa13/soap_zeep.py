@@ -13,4 +13,4 @@ result = client.service.NumberToWords(
 )
 
 # imprime o resultado
-print(f"{result}")
+print(result)
