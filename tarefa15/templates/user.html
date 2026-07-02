@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <h2>{% block title %} {{ user_data['nome_usual'] }} {% endblock %}</h2>
+    <div class="row">
+        <div class="col-2">
+            <img src="{{ user_data['url_foto_150x200'] }}" alt="foto" class="rounded float-start" style="width: 100%;">
+        </div>
+        <div class="col-10">
+            <ul class="list-group">
+                {% for field in user_data %}
+                <li class="list-group-item"><b>{{ field }}</b>: {{ user_data[field] }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+    
+    <div class="d-grid justify-content-md-end mt-3">
+        <p class="btn btn-primary"><a href="{{url_for('logout')}}" style="color:#fff" class="text-decoration-none">Logout</a></p>
+    </div>
+
+{% endblock %}
