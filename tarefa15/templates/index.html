@@ -3,6 +3,8 @@
 {% block content %}
     <h2>{% block title %} Login OAuth SUAP {% endblock %}</h2>
 
-    <p class="btn btn-primary"><a href="{{url_for('login')}}" style="color:#fff" class="text-decoration-none">Login</a></p>
+    <div class="d-grid justify-content-md-end mt-3">
+        <p class="btn btn-primary"><a href="{{url_for('login')}}" style="color:#fff" class="text-decoration-none">Login</a></p>
+    </div>
 
 {% endblock %}

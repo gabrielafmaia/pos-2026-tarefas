@@ -27,7 +27,31 @@ oauth.register(
 def index():
     if 'suap_token' in session:
         meus_dados = oauth.suap.get('rh/meus-dados')
-        return render_template('user.html', user_data=meus_dados.json())
+        user_data = meus_dados.json()
+
+        field_labels = {
+            'id': 'ID',
+            'matricula': 'Matrícula',
+            'nome_usual': 'Nome usual',
+            'rg': 'RG',
+            'filiacao': 'Filiação',
+            'nome': 'Nome completo',
+            'tipo_sanguineo': 'Tipo sanguíneo',
+            'data_nascimento': 'Data de nascimento',
+            'cpf': 'CPF',
+            'email': 'E-mail',
+            'url_foto_75x100': 'Foto 75x100',
+            'url_foto_150x200': 'Foto 150x200',
+            'tipo_vinculo': 'Tipo de vínculo',
+            'vinculo': 'Vínculo',
+        }
+
+        user_fields = []
+        for field, value in user_data.items():
+            label = field_labels.get(field, field.replace('_', ' ').capitalize())
+            user_fields.append((label, value))
+
+        return render_template('user.html', user_data=user_data, user_fields=user_fields)
     else:
         return render_template('index.html')
 

@@ -2,15 +2,16 @@
 
 {% block content %}
 
-    <h2>{% block title %} {{ user_data['nome_usual'] }} {% endblock %}</h2>
+    <h2 class="text-secondary">{% block title %} {{ user_data['nome_usual'] }} {% endblock %}</h2>
+    <hr>
     <div class="row">
         <div class="col-2">
             <img src="{{ user_data['url_foto_150x200'] }}" alt="foto" class="rounded float-start" style="width: 100%;">
         </div>
         <div class="col-10">
             <ul class="list-group">
-                {% for field in user_data %}
-                <li class="list-group-item"><b>{{ field }}</b>: {{ user_data[field] }}</li>
+                {% for label, value in user_fields %}
+                <li class="list-group-item"><b>{{ label }}</b>: {{ value }}</li>
                 {% endfor %}
             </ul>
         </div>
