@@ -1,18 +1,32 @@
 <!doctype html>
 <html>
-  <head>
+<head>
     <meta charset="utf-8">
-    <title>{% block title %} {% endblock %}</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-  </head>
-  <body class="container mt-5 mb-5">
-    <h1><a href="{{ url_for('index')}}" class="text-decoration-none">Login SUAP OAuth</a></h1>
-    <hr>
+    <title>{% block title %}{% endblock %}</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
 
-    <div>
-        {% block content %} {% endblock %}
+<body>
+
+<nav class="navbar navbar-expand-lg py-3 shadow-sm bg-body-tertiary">
+    <div class="container">
+        <a class="navbar-brand" style="font-weight: bold" href="{{ url_for('index') }}">
+            Login SUAP OAuth
+        </a>
+
+        {% if user_data %}
+        <div>
+            <a href="{{ url_for('logout') }}" class="btn btn-danger">
+                Logout
+            </a>
+        </div>
+        {% endif %}
     </div>
+</nav>
 
-  </body>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+<div class="container my-5">
+    {% block content %}{% endblock %}
+</div>
+
+</body>
 </html>

@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+
+{% block title %}Meu Boletim{% endblock title %}
+
+{% block content %}
+
+<h4 class="mb-3">Meu Boletim</h4>
+
+{% if boletim_data %}
+{% for disciplina in boletim_data %} <div style="
+     border: 1px solid #ddd;
+     border-radius: 10px;
+     padding: 15px;
+     margin-bottom: 15px;
+     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+ "> <h4>{{ disciplina.disciplina }}</h4>
+
+
+    <p class="mb-2"><strong>Situação:</strong> {{ disciplina.situacao }}</p>
+    <p class="mb-2"><strong>Faltas:</strong> {{ disciplina.numero_faltas }}</p>
+    <p class="mb-2"><strong>Frequência:</strong> {{ disciplina.percentual_carga_horaria_frequentada }}%</p>
+
+    <table border="1" cellpadding="8" cellspacing="0" style="border-collapse: collapse; width: 100%" class="table table-bordered">
+        <tr>
+            <th>Etapa</th>
+            <th>Nota</th>
+            <th>Faltas</th>
+        </tr>
+        <tr>
+            <td>1ª</td>
+            <td>{{ disciplina.nota_etapa_1.nota or "-" }}</td>
+            <td>{{ disciplina.nota_etapa_1.faltas }}</td>
+        </tr>
+        <tr>
+            <td>2ª</td>
+            <td>{{ disciplina.nota_etapa_2.nota or "-" }}</td>
+            <td>{{ disciplina.nota_etapa_2.faltas }}</td>
+        </tr>
+        <tr>
+            <td>3ª</td>
+            <td>{{ disciplina.nota_etapa_3.nota or "-" }}</td>
+            <td>{{ disciplina.nota_etapa_3.faltas }}</td>
+        </tr>
+        <tr>
+            <td>4ª</td>
+            <td>{{ disciplina.nota_etapa_4.nota or "-" }}</td>
+            <td>{{ disciplina.nota_etapa_4.faltas }}</td>
+        </tr>
+    </table>
+
+    {% if disciplina.media_disciplina %}
+        <p class="mb-0 mt-2">
+            <strong>Média Atual:</strong> {{ disciplina.media_disciplina }}
+        </p>
+    {% endif %}
+    
+</div>
+{% endfor %}
+
+
+{% else %} <p>Nenhum dado de boletim disponível.</p>
+{% endif %}
+
+{% endblock %}

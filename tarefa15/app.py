@@ -1,3 +1,5 @@
+from urllib import response
+
 from flask import Flask, redirect, url_for, session, request, jsonify, render_template
 from authlib.integrations.flask_client import OAuth
 from dotenv import load_dotenv
@@ -22,39 +24,24 @@ oauth.register(
     fetch_token=lambda: session.get('suap_token')
 )
 
-
+def get_user():
+    return oauth.suap.get('rh/meus-dados').json()
 @app.route('/')
 def index():
     if 'suap_token' in session:
         meus_dados = oauth.suap.get('rh/meus-dados')
-        user_data = meus_dados.json()
-
-        field_labels = {
-            'id': 'ID',
-            'matricula': 'Matrícula',
-            'nome_usual': 'Nome usual',
-            'rg': 'RG',
-            'filiacao': 'Filiação',
-            'nome': 'Nome completo',
-            'tipo_sanguineo': 'Tipo sanguíneo',
-            'data_nascimento': 'Data de nascimento',
-            'cpf': 'CPF',
-            'email': 'E-mail',
-            'url_foto_75x100': 'Foto 75x100',
-            'url_foto_150x200': 'Foto 150x200',
-            'tipo_vinculo': 'Tipo de vínculo',
-            'vinculo': 'Vínculo',
-        }
-
-        user_fields = []
-        for field, value in user_data.items():
-            label = field_labels.get(field, field.replace('_', ' ').capitalize())
-            user_fields.append((label, value))
-
-        return render_template('user.html', user_data=user_data, user_fields=user_fields)
+        return render_template('user.html', user_data=meus_dados.json())
     else:
         return render_template('index.html')
 
+@app.route('/meu-boletim/<int:ano>/<int:periodo>')
+def boletim(ano, periodo):
+    if 'suap_token' in session:
+        boletim_data = oauth.suap.get(f'ensino/meu-boletim/{ano}/{periodo}/')
+        user = get_user()
+        return render_template('boletim.html', boletim_data=boletim_data.json()["results"], user_data=user)
+    else:
+        return redirect(url_for('login'))
 
 @app.route('/login')
 def login():

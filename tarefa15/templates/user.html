@@ -1,24 +1,63 @@
-{% extends 'base.html' %}
+{% extends 'base.html' %} {% block title %}{{ user_data['nome_usual'] }}{% endblock %} {% block content %}
 
-{% block content %}
+<div class="card shadow-sm">
+  <div class="card-body">
+    <div class="row align-items-center">
+      <div class="col-md-1 text-center">
+        <img
+          src="{{ user_data['url_foto_150x200'] }}"
+          alt="Foto do usuário"
+          class="img-fluid rounded"
+          style="max-height: 200px"
+        />
+      </div>
 
-    <h2 class="text-secondary">{% block title %} {{ user_data['nome_usual'] }} {% endblock %}</h2>
-    <hr>
-    <div class="row">
-        <div class="col-2">
-            <img src="{{ user_data['url_foto_150x200'] }}" alt="foto" class="rounded float-start" style="width: 100%;">
-        </div>
-        <div class="col-10">
-            <ul class="list-group">
-                {% for label, value in user_fields %}
-                <li class="list-group-item"><b>{{ label }}</b>: {{ value }}</li>
-                {% endfor %}
-            </ul>
-        </div>
+      <div class="col-md-11">
+        <h2>{{ user_data['nome_usual'] }}</h2>
+
+        {% if user_data['matricula'] %}
+        <p class="text-muted mb-0">Matrícula: {{ user_data['matricula'] }}</p>
+        {% endif %}
+      </div>
     </div>
-    
-    <div class="d-grid justify-content-md-end mt-3">
-        <p class="btn btn-primary"><a href="{{url_for('logout')}}" style="color:#fff" class="text-decoration-none">Logout</a></p>
+
+    <hr />
+
+    <h4 class="mb-3">Dados do Usuário</h4>
+
+    <div class="table-responsive">
+      <table class="table table-striped table-hover">
+        <tbody>
+          {% for field in user_data %}
+          <tr>
+            <th>{{ field }}</th>
+            <td>{{ user_data[field] }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
     </div>
+
+    <hr />
+    <h4 class="mb-3">Boletins</h4>
+    <div class="d-flex gap-2">
+      <div>
+        <a href="{{ url_for('boletim', ano=2023, periodo=1) }}" class="btn btn-primary"> Boletim 2023 </a>
+      </div>
+
+      <div>
+        <a href="{{ url_for('boletim', ano=2024, periodo=1) }}" class="btn btn-primary"> Boletim 2024 </a>
+      </div>
+
+      <div>
+        <a href="{{ url_for('boletim', ano=2025, periodo=1) }}" class="btn btn-primary"> Boletim 2025 </a>
+      </div>
+
+      <div>
+        <a href="{{ url_for('boletim', ano=2026, periodo=1) }}" class="btn btn-primary"> Boletim 2026 </a>
+      </div>
+    </div>
+  </div>
+</div>
 
 {% endblock %}
